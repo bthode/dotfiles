@@ -90,6 +90,7 @@ Make sure this section appears before the `<key>ProgramArguments</key>` entry.
 ## 4. Reload the Nix Daemon Service
 
 After editing the plist, reload the Nix daemon:
+Unload may fail if the service is not running.
 
 ```sh
 sudo launchctl unload /Library/LaunchDaemons/org.nixos.nix-daemon.plist
