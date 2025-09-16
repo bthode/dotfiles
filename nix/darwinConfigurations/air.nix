@@ -10,10 +10,22 @@ let
     {
       imports = [
         inputs.home-manager.darwinModules.home-manager
+        inputs.agenix.darwinModules.default
         flakeContext.inputs.self.darwinModules.darwin
         flakeContext.inputs.self.homeModules.bthode
       ];
       config = {
+        age.secrets.example-secret = {
+          file = "${inputs.nix-secrets}/example-secret.age";
+        };
+        age.secrets.npmrc = {
+          file = "${inputs.nix-secrets}/example-secret.age";
+          path = "/Users/bthode/.npmrc";
+          owner = "bthode";
+          group = "staff";
+          mode = "0600";
+        };
+
         homeModules.bthode.username = "bthode";
         darwinModules.darwin.primaryUser = "bthode";
         home-manager.useGlobalPkgs = true;
@@ -30,7 +42,6 @@ let
         documentation = {
           enable = false;
         };
-
         system = {
           stateVersion = 6;
           activationScripts.extraActivation.text = ''

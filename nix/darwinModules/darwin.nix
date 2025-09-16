@@ -8,6 +8,7 @@
 {
   imports = [
     inputs.nix-homebrew.darwinModules.nix-homebrew
+    inputs.agenix.darwinModules.default
   ];
 
   options = {
@@ -19,6 +20,11 @@
   };
 
   config = {
+    age.secrets.example-secret = {
+      file = "${inputs.nix-secrets}/example-secret.age";
+      owner = config.darwinModules.darwin.primaryUser;
+    };
+
     nix-homebrew = {
       enable = true;
       enableRosetta = true;
@@ -44,6 +50,7 @@
         pkgs.google-chrome # TODO: This should be only for non-work machines. Work already installs it.
         pkgs.lastpass-cli
         pkgs.age
+        inputs.agenix.packages.${pkgs.system}.default
         # pkgs.zellij
         # pkgs.brave
         # pkgs.claude-code

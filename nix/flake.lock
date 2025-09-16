@@ -154,17 +154,14 @@
     "nix-secrets": {
       "flake": false,
       "locked": {
-        "lastModified": 1757896914,
-        "narHash": "sha256-Ld+fS8yE84nKG87RbBJU6mz3QYhdjJwpQ0QPd5wM4pE=",
-        "ref": "refs/heads/master",
-        "rev": "8c8752f2e99094da222f6b55ca032836521b1e26",
-        "revCount": 1,
-        "type": "git",
-        "url": "ssh://git@github.com/bthode/nix-secrets.git"
+        "lastModified": 1758057670,
+        "narHash": "sha256-mdympt/CUGzWO0pOp1E+An4jBiNmLgfc6LqMt2whrD8=",
+        "path": "/Users/bthode/code/tmp/nix-secrets",
+        "type": "path"
       },
       "original": {
-        "type": "git",
-        "url": "ssh://git@github.com/bthode/nix-secrets.git"
+        "path": "/Users/bthode/code/tmp/nix-secrets",
+        "type": "path"
       }
     },
     "nixpkgs": {
