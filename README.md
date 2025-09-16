@@ -121,8 +121,15 @@ Look for the `EnvironmentVariables` section in the output to confirm your change
 
 ---
 
-Activating the nix config, where #air is the name of the profile.
+
+Clone this current repository and cd into it:
+
+Activate the nix config, where #air is the name of the profile.
 
 ```sh
-sudo nix run nix-darwin --extra-experimental-features "nix-command flakes" -- switch --flake ~/dotfiles/nix#air
+git clone https://github.com/bthode/nix-darwin.git
+cd nix-darwin
+sudo nix run nix-darwin --extra-experimental-features "nix-command flakes" -- switch --flake .#air
 ```
+
+Make use of a Github deployment key to access nix-secrets repository.
