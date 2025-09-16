@@ -31,7 +31,7 @@
         # pkgs.telegram-desktop
         pkgs.nixd
         pkgs.fd
-        pkgs.spotify
+        # pkgs.spotify Waiting for hash to be corrected
         # pkgs.ripgrep
         pkgs.google-chrome
         pkgs.lastpass-cli
