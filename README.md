@@ -8,6 +8,12 @@ Install XCode command line tools:
 xcode-select --install
 ```
 
+Install all available updates:
+
+```sh
+softwareupdate --install --all
+```
+
 Install Nix via Determinate Systems https://determinate.systems/
 Make sure to decline "Install Determinate Nix?" as it isn't support for nix-darwin yet.
 
@@ -85,11 +91,9 @@ Make sure this section appears before the `<key>ProgramArguments</key>` entry.
 
 After editing the plist, reload the Nix daemon:
 
-<!--```sh-->
-
+```sh
 sudo launchctl unload /Library/LaunchDaemons/org.nixos.nix-daemon.plist
 sudo launchctl load /Library/LaunchDaemons/org.nixos.nix-daemon.plist
-
 ````
 
 ---
