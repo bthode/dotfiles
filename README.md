@@ -1,5 +1,7 @@
 Prerequisites:
 
+Sign into your Apple ID account.
+
 Install XCode command line tools:
 
 ```sh
