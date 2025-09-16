@@ -16,7 +16,7 @@ let
       config = {
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
-        home-manager.users.bryan.thode = {
+        home-manager.users."bryan.thode" = {
           home.homeDirectory = lib.mkForce "/Users/bryan.thode";
           home.username = "bryan.thode";
           home.stateVersion = "25.11";
