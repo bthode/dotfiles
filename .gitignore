@@ -1,0 +1,22 @@
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon files in macOS (resource fork files)
+Icon?
+._*
+
+# macOS Finder tags
+.Spotlight-V100
+.Trashes
+
+# macOS disk image settings
+.VolumeIcon.icns
+
+# macOS metadata files on network shares
+.AppleSharePBD
+
+# macOS cache files
+*.swp
+*.lock
