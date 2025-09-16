@@ -40,8 +40,8 @@
         pkgs.nixd
         pkgs.fd
         # pkgs.spotify Waiting for hash to be corrected
-        # pkgs.ripgrep
-        pkgs.google-chrome
+        # pkgs.ripgrep/
+        pkgs.google-chrome # TODO: This should be only for non-work machines. Work already installs it.
         pkgs.lastpass-cli
         pkgs.age
         # pkgs.zellij
@@ -52,9 +52,10 @@
     homebrew = {
       enable = true;
 
-      # brews = [
-      #   "mas"
-      # ];
+      brews = [
+        "displayplacer"
+        "mas"
+      ];
 
       casks = [
         "epic-games"
