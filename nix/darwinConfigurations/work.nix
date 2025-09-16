@@ -29,9 +29,9 @@ let
             enable = true;
           };
         };
-      };
-      system = {
-        stateVersion = 6;
+        system = {
+          stateVersion = 6;
+        };
       };
     };
 in
