@@ -1,3 +1,5 @@
+These are my personal notes for bootstrapping a new macOS machine.
+
 Prerequisites:
 
 Sign into your Apple ID account.
@@ -118,3 +120,9 @@ Look for the `EnvironmentVariables` section in the output to confirm your change
 - For troubleshooting, check the Nix daemon logs and plist syntax.
 
 ---
+
+Activating the nix config, where #air is the name of the profile.
+
+```sh
+sudo nix run nix-darwin --extra-experimental-features "nix-command flakes" -- switch --flake ~/dotfiles/nix#air
+```
