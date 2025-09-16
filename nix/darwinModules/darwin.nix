@@ -43,6 +43,7 @@
         # pkgs.ripgrep
         pkgs.google-chrome
         pkgs.lastpass-cli
+        pkgs.age
         # pkgs.zellij
         # pkgs.brave
         # pkgs.claude-code
@@ -121,8 +122,9 @@
 
     system = {
       activationScripts.extraActivation.text = ''
-        softwareupdate --install-rosetta --agree-to-license
-        sudo xcodebuild -license accept
+        # softwareupdate --install-rosetta --agree-to-license
+        # sudo xcodebuild -license accept
+        /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
       '';
       defaults = {
         NSGlobalDomain = {

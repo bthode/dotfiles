@@ -14,6 +14,17 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    agenix = {
+      url = "github:ryantm/agenix";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.darwin.follows = "nix-darwin";
+    };
+
+    nix-secrets = {
+      url = "git+ssh://git@github.com/bthode/nix-secrets.git";
+      flake = false; # This is just a source, not a flake
+    };
+
     nix-homebrew.url = "github:zhaofengli/nix-homebrew";
     homebrew-core = {
       url = "github:homebrew/homebrew-core";
@@ -33,6 +44,8 @@
       nix-homebrew,
       homebrew-core,
       homebrew-cask,
+      agenix,
+      nix-secrets,
     }:
     let
       flakeContext = {
