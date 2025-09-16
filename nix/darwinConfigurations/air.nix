@@ -14,6 +14,7 @@ let
         flakeContext.inputs.self.homeModules.bthode
       ];
       config = {
+        homeModules.bthode.username = "bthode";
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
         home-manager.users.bthode = {

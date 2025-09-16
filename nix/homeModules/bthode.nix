@@ -6,8 +6,15 @@
   ...
 }:
 {
+  options = {
+    homeModules.bthode.username = lib.mkOption {
+      type = lib.types.str;
+      description = "Username for the bthode home configuration";
+    };
+  };
+
   config = {
-    home-manager.users.bthode = {
+    home-manager.users.${config.homeModules.bthode.username} = {
       targets.darwin.defaults = {
         "com.apple.desktopservices" = {
           DSDontWriteNetworkStores = true;
