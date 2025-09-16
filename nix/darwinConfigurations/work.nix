@@ -31,6 +31,7 @@ let
           };
         };
         system = {
+          primaryUser = "bryan.thode";
           stateVersion = 6;
         };
       };
