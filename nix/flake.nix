@@ -21,7 +21,7 @@
     };
 
     nix-secrets = {
-      url = "path:/Users/bthode/code/tmp/nix-secrets";
+      url = "git+ssh://git@github.com/bthode/nix-secrets.git";
       flake = false; # This is just a source, not a flake
     };
 

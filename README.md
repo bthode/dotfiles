@@ -2,6 +2,12 @@ These are my personal notes for bootstrapping a new macOS machine.
 
 Prerequisites:
 
+Copy the machines default ssh key to ~/.ssh/id_rsa
+
+```sh
+ssh-add --apple-use-keychain ~/.ssh/id_ed25519 2>/dev/null || ssh-add --apple-use-keychain ~/.ssh/id_rsa 2>/dev/null || echo "No standard SSH keys found"
+```
+
 Sign into your Apple ID account.
 
 Install XCode command line tools:
