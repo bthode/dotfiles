@@ -10,11 +10,19 @@
     inputs.nix-homebrew.darwinModules.nix-homebrew
   ];
 
+  options = {
+    darwinModules.darwin.primaryUser = lib.mkOption {
+      type = lib.types.str;
+      default = "bthode";
+      description = "Primary user for the Darwin system";
+    };
+  };
+
   config = {
     nix-homebrew = {
       enable = true;
       enableRosetta = true;
-      user = "bthode";
+      user = config.darwinModules.darwin.primaryUser;
       taps = {
         "homebrew/homebrew-core" = inputs.homebrew-core;
         "homebrew/homebrew-cask" = inputs.homebrew-cask;
@@ -72,7 +80,7 @@
       #   Magnet = 441258766;
       # };
 
-      user = "bthode";
+      user = config.darwinModules.darwin.primaryUser;
     };
     nixpkgs = {
       config.allowUnfree = true;
@@ -177,7 +185,7 @@
         enableKeyMapping = true;
         remapCapsLockToEscape = true;
       };
-      primaryUser = "bthode";
+      primaryUser = config.darwinModules.darwin.primaryUser;
       startup = {
         chime = false;
       };

@@ -15,6 +15,7 @@ let
       ];
       config = {
         homeModules.bthode.username = "bryan.thode";
+        darwinModules.darwin.primaryUser = "bryan.thode";
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
         home-manager.users."bryan.thode" = {
@@ -31,7 +32,6 @@ let
           };
         };
         system = {
-          primaryUser = "bryan.thode";
           stateVersion = 6;
         };
       };
