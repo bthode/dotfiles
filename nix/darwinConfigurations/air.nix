@@ -34,10 +34,6 @@ let
           home.homeDirectory = lib.mkForce "/Users/bthode";
           home.username = "bthode";
           home.stateVersion = "25.11";
-          programs.zellij = {
-            enable = false;
-            enableFishIntegration = false;
-          };
         };
         documentation = {
           enable = false;

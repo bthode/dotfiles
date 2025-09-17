@@ -138,7 +138,6 @@
         NSGlobalDomain = {
           "com.apple.keyboard.fnState" = true;
           "com.apple.swipescrolldirection" = false;
-          # AppleShowScrollBars = "Always";
           AppleInterfaceStyle = "Dark";
           AppleKeyboardUIMode = 3;
           ApplePressAndHoldEnabled = false;

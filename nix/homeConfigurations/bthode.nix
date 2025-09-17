@@ -38,14 +38,12 @@ let
       home-manager.users.bthode = homeModule;
     };
 in
-(
-  (inputs.home-manager.lib.homeManagerConfiguration {
-    modules = [
-      homeModule
-    ];
-    pkgs = inputs.nixpkgs.legacyPackages.aarch64-darwin;
-  })
-  {
-    inherit nixosModule;
-  }
-)
+inputs.home-manager.lib.homeManagerConfiguration {
+  modules = [
+    homeModule
+  ];
+  pkgs = inputs.nixpkgs.legacyPackages.aarch64-darwin;
+}
+// {
+  nixosModule = nixosModule;
+}
