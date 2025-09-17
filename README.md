@@ -135,7 +135,12 @@ Activate the nix config, where #air is the name of the profile.
 ```sh
 git clone https://github.com/bthode/nix-darwin.git
 cd nix-darwin
-sudo nix run nix-darwin --extra-experimental-features "nix-command flakes" -- switch --flake .#air
+sudo nix run nix-darwin --extra-experimental-features "nix-command flakes" -- switch --flake .#HOST
+```
+
+Home-Manager Command
+```sh
+nix run home-manager -- switch --flake ~/dotfiles/nix#PROFILE
 ```
 
 Make use of a Github deployment key to access nix-secrets repository.
