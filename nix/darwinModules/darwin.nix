@@ -101,6 +101,9 @@
     power = {
       restartAfterFreeze = true;
       # restartAfterPowerFailure = true; # Not supported on laptops
+      sleep = {
+        display = 15;
+      };
     };
     programs = {
       direnv = {
