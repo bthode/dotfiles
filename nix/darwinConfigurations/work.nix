@@ -34,7 +34,7 @@ let
         system = {
           stateVersion = 6;
           activationScripts.extraActivation.text = ''
-            /opt/homebrew/bin/displayplacer "id:37D8832A-2D66-02CA-B9F7-8F30A301B230 degree:90"
+            /opt/homebrew/bin/displayplacer "id:37D8832A-2D66-02CA-B9F7-8F30A301B230"
           '';
         };
       };
