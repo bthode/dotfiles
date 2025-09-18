@@ -22,6 +22,12 @@ let
           home.homeDirectory = lib.mkForce "/Users/bryan.thode";
           home.username = "bryan.thode";
           home.stateVersion = "25.11";
+          home.packages = with pkgs; [
+            jetbrains.idea-ultimate
+            zed-editor
+            maccy
+            spotify
+          ];
         };
         programs = {
           _1password = {
